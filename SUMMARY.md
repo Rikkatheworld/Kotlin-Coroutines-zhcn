@@ -31,3 +31,4 @@
   * [演员](group-3/channel-he-flow/yan-yuan.md)
   * [冷热数据流](group-3/channel-he-flow/leng-re-shu-ju-liu.md)
   * [Flow 概述](group-3/channel-he-flow/flow-gai-shu.md)
+  * [构建 Flow](group-3/channel-he-flow/gou-jian-flow.md)
