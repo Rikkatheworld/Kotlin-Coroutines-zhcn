@@ -32,3 +32,6 @@
   * [冷热数据流](group-3/channel-he-flow/leng-re-shu-ju-liu.md)
   * [Flow 概述](group-3/channel-he-flow/flow-gai-shu.md)
   * [构建 Flow](group-3/channel-he-flow/gou-jian-flow.md)
+  * [Flow 生命周期函数](group-3/channel-he-flow/flow-sheng-ming-zhou-qi-han-shu.md)
+  * [Flow的处理](group-3/channel-he-flow/flow-de-chu-li.md)
+  * [SharedFlow 和 StateFlow](group-3/channel-he-flow/sharedflow-he-stateflow.md)
