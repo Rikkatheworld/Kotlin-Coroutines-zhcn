@@ -19,7 +19,7 @@
   * [测试 Kotlin 协程](part2-kotlin-xie-cheng-ku/ce-shi-kotlin-xie-cheng.md)
 * [Part3: Channel 和 Flow](channel-he-flow/README.md)
   * [Channel](channel-he-flow/channel.md)
-  * [演员](channel-he-flow/yan-yuan.md)
+  * [Actor](channel-he-flow/yan-yuan.md)
   * [冷热数据流](channel-he-flow/leng-re-shu-ju-liu.md)
   * [Flow 概述](channel-he-flow/flow-gai-shu.md)
   * [构建 Flow](channel-he-flow/gou-jian-flow.md)
