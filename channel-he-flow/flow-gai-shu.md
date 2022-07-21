@@ -1,5 +1,9 @@
 # Flow 概述
 
+**系列电子书：**[传送门](https://rikka-2.gitbook.io/kotlin-coroutine-deep-dive-zhcn/)
+
+***
+
 `low` 表示的是**一个用于异步计算的数据流**。`Flow` 接口本身只允许收集那些流动的元素，这也就是说每个元素只有到达流的末端时，我们才去处理它们（Flow 的 `collect` 类似于集合的 `forEach`）。
 
 ```kotlin

@@ -486,7 +486,7 @@ suspend fun main() = coroutineScope {
 // 9
 ```
 
-### Channel 是原语通信的
+### Channel 是一种通信原语
 
 当不同的协程需要互相通信时， Channel 很有用，它们保证没有冲突（例如，共享状态没有问题）并且公平。
 
@@ -572,4 +572,4 @@ suspend fun handleOfferUpdates() = coroutineScope {
 
 ### 总结
 
-Channel 是一个强大的协程间原语通信的工具。它支持任意数量的发送方和接收方，并且发送到通道的每个值只能被接收一次。我们通常使用 `produce` 构建器来创建 channel，在 channel 中可以控制处理某些任务的协程数量。入金，我们最常用的是与 Flow 相关的 channel，这将在本书的后面介绍。
+Channel 是一个强大的协程间通信的工具。它支持任意数量的发送方和接收方，并且发送到通道的每个值只能被接收一次。我们通常使用 `produce` 构建器来创建 channel，在 channel 中可以控制处理某些任务的协程数量。入金，我们最常用的是与 Flow 相关的 channel，这将在本书的后面介绍。
