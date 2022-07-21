@@ -8,7 +8,7 @@ Channel 支持任意数量的发送方和接收方。并且发送到 Channel 的
 
 ![](https://img-blog.csdnimg.cn/ce22fc648f994c4f808558e52d7aa77f.png)
 
-![···图片··](https://img-blog.csdnimg.cn/739f3d84afd4425ca6f2b52cc51ef178.png)
+![](https://img-blog.csdnimg.cn/739f3d84afd4425ca6f2b52cc51ef178.png)
 
 `Channel` 是一个接口，它实现了另外两个接口：
 
