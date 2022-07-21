@@ -522,8 +522,6 @@ val coffeeResults = fanIn(
 
 在下一章中，你将会看到更多实际的例子。
 
-### Practical usage
-
 ### 实际使用情况
 
 我们使用 channel 的一个典型情况是：一端产生值，另一端处理。这些例子包括响应用户点击、来自服务器的新通知或随着时间推移更新搜索结果（一个很好的例子是 SkyScanner，它通过查询多个航空公司网站来搜索最便宜的航班）。然而，在大多数情况下，最好使用 `channelFlow` 或 `callbackFlow`，它们都是 `Channel` 和 `Flow` 的混合体（我们将在构建 Flow 的章节中介绍它们）。

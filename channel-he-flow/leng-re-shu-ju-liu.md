@@ -1,8 +1,8 @@
 # 冷热数据流
 
-Kotlin 协程最初只有 Channel，但创造者意识到这个是不够的。 Channel 是一种热数据流，但是我们经常需要冷数据流。
+在这里插入图片描述]\(https://img-blog.csdnimg.cn/d2893ae770c34a7b924a3372997cbafb.png) Kotlin 协程最初只有 Channel，但创造者意识到这个是不够的。 Channel 是一种热数据流，但是我们经常需要冷数据流。
 
-![](https://img-blog.csdnimg.cn/c9959653a0084828b9e26e7ced9d055a.png)
+![···图片··](https://img-blog.csdnimg.cn/c9959653a0084828b9e26e7ced9d055a.png)
 
 了解热数据流和冷数据流之间的区别可以帮助我们更好的学习 Flow 和其他相关的技术，因为你日常使用的大多数数据源都属于这两类之一。集合（List、Set）是热的，而序列和 Java Stream 是冷的。Channel 是热的，而 Flow 和 RxJava流是冷的。
 
