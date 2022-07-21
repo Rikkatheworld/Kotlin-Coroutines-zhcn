@@ -1,6 +1,6 @@
 # 冷热数据流
 
-在这里插入图片描述]\(https://img-blog.csdnimg.cn/d2893ae770c34a7b924a3372997cbafb.png) Kotlin 协程最初只有 Channel，但创造者意识到这个是不够的。 Channel 是一种热数据流，但是我们经常需要冷数据流。
+Kotlin 协程最初只有 Channel，但创造者意识到这个是不够的。 Channel 是一种热数据流，但是我们经常需要冷数据流。
 
 ![···图片··](https://img-blog.csdnimg.cn/c9959653a0084828b9e26e7ced9d055a.png)
 
