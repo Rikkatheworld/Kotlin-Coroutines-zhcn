@@ -1,9 +1,5 @@
 # 构建协程作用域
 
-**系列电子书：**[传送门](https://rikka-2.gitbook.io/kotlin-coroutine-deep-dive-zhcn/)
-
-***
-
 在前几章中，我们已经了解了构建作用域所需的工具。现在是时候总结这一知识，并看看它在实际项目中是如何使用的。我们将展示两个常见的例子，一个用于 Android，一个用于后端开发。
 
 ### CoroutineScope 工厂函数
