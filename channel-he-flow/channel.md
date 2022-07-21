@@ -6,7 +6,7 @@
 
 Channel 支持任意数量的发送方和接收方。并且发送到 Channel 的每个值只会被一个协程接收（一次）。
 
-![···图片··](https://img-blog.csdnimg.cn/ce22fc648f994c4f808558e52d7aa77f.png)
+![](https://img-blog.csdnimg.cn/ce22fc648f994c4f808558e52d7aa77f.png)
 
 ![···图片··](https://img-blog.csdnimg.cn/739f3d84afd4425ca6f2b52cc51ef178.png)
 
@@ -38,9 +38,7 @@ interface Channel<E> : SendChannel<E>, ReceiveChannel<E>
 * 当我们尝试 `receive` 而 channel 中没有元素时，协程将被挂起，直到该元素可用。就像我们的“书柜”一样，当有人去书架上找一本书，而书架是空的时候，这个人就需挂起，直到有人在那里放了一个他要的书
 * 另一方面，当 channel 达到了容量阈值时，`send` 将会被挂起。我们很快就会看到，大多数 channel 的容量都是有限的。就像我们的“书柜”一样，当有人想把一本书放在书架上，而书架已经放满了书时，这个人就得挂起，直到有人拿走一本书，从而腾出空间
 
-If you need to send or receive from a non-suspending function, you can use trySend and tryReceive. Both 如果需要从非挂起函数中发送或接收信息，可以使用 `trySend` 和 `tryReceive`。这两个操作都是即时的，并返回 `ChannelResult`，包含了有关操作成功或失败的结果信息。我们只能对容量有限的 channel 使用 `trySend` 和 `tryReceive`，因为它们不适用于交会的 channel。
-
-A channel might have any number of senders and receivers. However, the most common situation is when there is one coroutine on both sides of the channel.
+如果需要从非挂起函数中发送或接收信息，可以使用 `trySend` 和 `tryReceive`。这两个操作都是即时的，并返回 `ChannelResult`，包含了有关操作成功或失败的结果信息。我们只能对容量有限的 channel 使用 `trySend` 和 `tryReceive`，因为它们不适用于交会的 channel。
 
 一个 channel 可以有任意数量的发送方和接收方，然而， channel 最常见的情况是两端只有一个协程。
 
@@ -411,7 +409,11 @@ suspend fun main(): Unit = coroutineScope {
 
 ### Fan-in
 
-多个协程可以发送到同一个 channel。在下面的例子中，你可以看到两个协程将元素发送到同一个 channel。 ![···图片··](https://img-blog.csdnimg.cn/a5dbeb3606454469a2768870fdf55305.png)
+多个协程可以发送到同一个 channel。在下面的例子中，你可以看到两个协程将元素发送到同一个 channel。
+
+&#x20;
+
+![](https://img-blog.csdnimg.cn/a5dbeb3606454469a2768870fdf55305.png)
 
 ```kotlin
 suspend fun sendString(
