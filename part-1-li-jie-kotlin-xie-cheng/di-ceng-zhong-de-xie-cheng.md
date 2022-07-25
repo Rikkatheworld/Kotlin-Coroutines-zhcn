@@ -1,14 +1,14 @@
 # 底层中的协程
 
-有这么一种人，他们不能接受仅仅是只会开车，他们还想要了解引擎盖下面是如何运作了。我就是这样的人，所以我必须弄清楚协程是如何工作的。如果你也是这样的人，你也会喜欢本章的。如果不是的话，你可以跳过本章。
+有这么一种人，他们不能接受仅仅是只会开车，他们还想要了解引擎盖下面是如何运作的。我就是这样的人，所以我必须弄清楚协程是如何工作的。如果你也是这样的人，你也会喜欢本章的。如果不是的话，你可以跳过本章。
 
-本章不会介绍任何你可能会用到的工具，只是纯粹的阐述。我将尝试在一个令所有人都接受的层级上解释协程是如何工作的。重点如下：
+本章不会介绍任何你可能会用到的协程工具，只是做纯粹的阐述。我将尝试在一个令所有人都接受的层级上解释协程是如何工作的。重点如下：
 
 * 挂起函数就像状态机一样，在函数的开始，以及每次挂起协程后，都会有一个不同状态
 * 标识状态的数字和本地数据都保存在了 `continuation` 对象中 （注：我们上一章中提到了 `Continuation`，它是一个概念，也是一个类型。它就像是游戏中的存档点，本章我们将着重讨论它）
 * 一个函数的 `Continuation` 将它之后的调用行为包装了起来。因此，所有这些 `Continuation` 表示的是恢复函数的调用栈，
 
-如果你有兴趣了解一些内部结构（当然是简化的），请继续阅读一下内容。
+如果你有兴趣了解一些内部结构（当然是简化的），请继续阅读以下内容。
 
 ### 传递 Continuation 的方式
 
@@ -48,7 +48,7 @@ suspend fun myFunction() {
 fun myFunction(continuation: Continuation<*>): Any
 ```
 
-接下来，这个函数需要要一个属于它的 `continuation` 来记住它的状态。让我们将其命名为 `MyFunctionContinuation`（实际的 `continuation` 是一个对象表达式，没有名称，但是这样解释会更加容易）。在函数体的开头， `MyFuntion` 会将自己的 `continuation`（参数）包装到自己的 `continuation` （MyFunctionContinuation） 中。
+接下来，这个函数需要一个属于它的 `continuation` 来记住它的状态。让我们将其命名为 `MyFunctionContinuation`（实际的 `continuation` 是一个对象表达式，没有名称，但是这样解释会更加容易）。在函数体的开头， `MyFuntion` 会将自己的 `continuation`（参数）包装到自己的 `continuation` （MyFunctionContinuation） 中。
 
 ```kotlin
 val continuation = MyFunctionContinuation(continuation)
